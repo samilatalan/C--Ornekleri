@@ -1,0 +1,55 @@
+// Bütün Programlarda Kullandýðým Kütüphaneler
+#include <stdio.h>
+#include <iomanip> 
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+#include <locale.h>
+
+int main(){
+	// Türkçe Karakter Sorunu Ýçin Bulduðum Çözüm 
+	//(Kütüphanedeki locale.h satýrý ile birlikte çalýþýr)
+	setlocale(LC_ALL, "Turkish"); 
+
+	//Program Satýrlarý
+	using namespace std;
+	int aci1,aci2,aci3;
+	devam:
+	char secim = 'd';
+	cout << "----------Ucgen Hesaplama Programý----------" << endl;
+	cout << "Ýlk Açýyý Giriniz: ";
+	cin >> aci1;
+	cout << "Ýkinci Açýyý Giriniz: ";
+	cin >> aci2;
+	aci3 = 180 - (aci1+aci2);
+	cout << "Üçüncü Açý:" << aci3 << endl;
+	cout << "Üçgen Türü:";
+	if(aci1==aci2 && aci2==aci3){
+		cout << "-Eþkenar Üçgen-";
+	}
+	else if(aci1==aci2 || aci1==aci3 || aci2==aci3){
+		cout << "-Ýkizkenar Üçgen-";
+	}
+	else if(aci1==90 || aci2==90 || aci3==90){
+	
+		cout << "Dik Üçgen";}
+	else { cout << "Çeþitkanar Üçgen"; }
+	
+	
+	
+	// Programa Devam Et ya da Çýk
+	cout << endl << "Devam etmek (d)'ye, Cikmak icin (c)'ye basiniz";
+	cin >> secim;
+	if (secim == 'd'){
+		goto devam;
+			}
+	else {
+	cout << endl << "--------------Program Sonu--------------" << endl << "- Gökhan Samil Atalan" ;
+	
+}
+son:	 	
+	return 0;
+
+}
+
+

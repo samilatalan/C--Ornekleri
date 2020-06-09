@@ -1,0 +1,34 @@
+// Bütün Programlarda Kullandýðým Kütüphaneler
+#include <stdio.h>
+#include <iomanip> 
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+#include <locale.h>
+
+
+// Türkçe Karakter Çözümü
+setlocale(LC_ALL, "Turkish"); 
+
+// Programý Kapatmadan Devam Etmek
+	devam:   
+	char secim = 'd';
+	.
+	.
+	.
+	cout << endl << "Devam etmek (d)'ye, Cikmak icin (c)'ye basiniz";
+	cin >> secim;
+	if (secim == 'd'){
+		goto devam; }
+	else {
+	cout << endl << "Son" << ; }
+son:	
+
+// Programý baþa sarmak
+
+devam:
+.
+.
+.
+.
+goto devam;

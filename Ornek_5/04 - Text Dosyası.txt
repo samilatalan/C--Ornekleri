@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <iomanip> 
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "Turkish"); 
+	using namespace std;
+	
+	cout << "1 ile 1000 Arasýndaki 5'e Bölünüp 7ye bölünmeyen sayýlar" << endl ;
+	cout << "--------------------------------------"<< endl;
+    int toplam=0;
+	int kacsayi=0;
+    devam:
+	char secim = 'd';
+            for (int i = 1; i <=1000; i++) 
+            {
+                if ( (i % 5 == 0) &&  (i%7!=0) ){
+                    cout << i << "   ";
+                    toplam = toplam + i;
+                    kacsayi++;
+                };
+               
+            }
+            cout << endl<< "--------------------------------------"<< endl;
+            cout << endl << "Sayýlar Toplamý: " << toplam;
+            cout << endl << "Sayý Miktarý: " << kacsayi;
+
+
+	// Programa Devam Et ya da Çýk
+	cout << endl << "Devam etmek (d)'ye, Cikmak icin (c)'ye basiniz";
+	cin >> secim;
+	if (secim == 'd'){
+		goto devam;
+			}
+	else {
+	cout << endl << "--------------Program Sonu--------------" ;
+	
+}
+son:	 	
+	return 0;
+
+}
+
+
+
+
